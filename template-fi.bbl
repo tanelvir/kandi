@@ -1,0 +1,74 @@
+\begin{thebibliography}{Cam03}
+  \providebibliographyfont{name}{}%
+  \providebibliographyfont{lastname}{}%
+  \providebibliographyfont{title}{\emph}%
+  \providebibliographyfont{jtitle}{\btxtitlefont}%
+  \providebibliographyfont{etal}{\emph}%
+  \providebibliographyfont{journal}{}%
+  \providebibliographyfont{volume}{}%
+  \providebibliographyfont{ISBN}{\MakeUppercase}%
+  \providebibliographyfont{ISSN}{\MakeUppercase}%
+  \providebibliographyfont{url}{\url}%
+  \providebibliographyfont{numeral}{}%
+  \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem [{Cam03}]{moen}
+\btxnamefont {\btxlastnamefont {Campbell}, S.}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Supporting digital signatures in mobile
+  environments}{Supporting digital signatures in mobile environments}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Enabling Technologies: Infrastructure
+  for Collaborative Enterprises, 2003. WET ICE 2003. Proceedings. Twelfth IEEE
+  International Workshops on}, \btxpageslong {}\ 238--242,
+  \btxprintmonthyear{.}{June}{2003}{long}.
+
+\bibitem [{LCJ04}]{gene}
+\btxnamefont {\btxlastnamefont {Lei}, Yu}, \btxnamefont {\btxlastnamefont
+  {Chen}, Deren}\btxandcomma {} \btxandlong {}\ \btxnamefont {\btxlastnamefont
+  {Jiang}, Zhongding}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
+  {Generating digital signatures on mobile devices}{Generating Digital
+  Signatures on Mobile Devices}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of the 18th International
+  Conference on Advanced Information Networking and Applications - Volume 2},
+  AINA '04, \btxpageslong {}\ 532--, Washington, DC, USA, 2004.
+  \btxpublisherfont {IEEE Computer Society}\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {0-7695-2051-0}}}.
+\newblock {\latintext
+  \btxurlfont{http://dl.acm.org/citation.cfm?id=977394.977538}}.
+
+\bibitem [{SSA10}]{proxy}
+\btxnamefont {\btxlastnamefont {Samadani}, Mohammad\btxfnamespacelong Hasan},
+  \btxnamefont {\btxlastnamefont {Shajari}, Mehdi}\btxandcomma {} \btxandlong
+  {}\ \btxnamefont {\btxlastnamefont {Ahaniha}, Mohammad\btxfnamespacelong
+  Mehdi}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {Self-proxy mobile
+  signature: A new client-based mobile signature model}{Self-Proxy Mobile
+  Signature: A New Client-Based Mobile Signature Model}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of the 2010 IEEE 24th
+  International Conference on Advanced Information Networking and Applications
+  Workshops}, WAINA '10, \btxpageslong {}\ 437--442, Washington, DC, USA, 2010.
+  \btxpublisherfont {IEEE Computer Society}\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {978-0-7695-4019-1}}}.
+\newblock {\latintext \btxurlfont{http://dx.doi.org/10.1109/WAINA.2010.125}}.
+
+\bibitem [{SY13}]{enti}
+\btxnamefont {\btxlastnamefont {Schwab}, David} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Yang}, Li}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
+  {Entity authentication in a mobile-cloud environment}{Entity Authentication
+  in a Mobile-cloud Environment}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of the Eighth Annual Cyber
+  Security and Information Intelligence Research Workshop}, CSIIRW '13,
+  \btxpageslong {}\ 42:1--42:4, New York, NY, USA, 2013. \btxpublisherfont
+  {ACM}\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {978-1-4503-1687-3}}}.
+\newblock {\latintext \btxurlfont{http://doi.acm.org/10.1145/2459976.2460024}}.
+
+\bibitem [{TX10}]{e-c}
+\btxnamefont {\btxlastnamefont {Tianhuang}, Chen} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Xiaoguang}, Xu}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Digital signature in the application of e-commerce
+  security}{Digital signature in the application of e-commerce security}}.
+\newblock \Btxinlong {}\ \btxtitlefont {E-Health Networking, Digital Ecosystems
+  and Technologies (EDT), 2010 International Conference on}, \btxvolumelong
+  {}~\btxvolumefont {1}, \btxpageslong {}\ 366--369,
+  \btxprintmonthyear{.}{April}{2010}{long}.
+
+\end{thebibliography}
