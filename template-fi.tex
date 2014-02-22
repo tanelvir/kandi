@@ -154,13 +154,22 @@ Menetelmän kehittäjien sukunimien mukaan nimetty RSA on salausalgoritmi, joka 
 
 \subsection{Mobiilikaupankäynti}
 
-Mobiilikaupankäynnillä tarkoitetaan mobiililaitteella tehtäviä maksutransaktioita tai 
+Mobiilikaupankäynnillä tarkoitetaan mobiililaitteella tehtäviä maksutransaktioita tai ostotapahtuman vahvistavia viestejä. Menetelmä on siis osa elektronista kaupankäyntiä, jossa käytetään digitaalisia allekirjoituksia \cite{e-c}. Schwab ja Yang toteavat suurten datamäärien varastoinnin olevan yleistä nykyaikaisilla mobiililaitteilla \cite{enti}. Samadanin, Shajarin ja Ahanihan artikkelissa esitellään huutokauppasovellus, joka vaatii jokaisen huudon varmistuksen lyhyen ajan sisällä \cite{proxy}. Allekirjoitusten luonti tulee olla siis nopeaa mobiililaitteilla tietoturva huomioon ottaen. Sekä laitepohjaisia että palvelinpohjaisia allekirjoituksia käytetään mobiilikaupankäynnissä \cite{proxy}.
 
 \section{Laitepohjaiset allekirjoitukset}
-\subsection{SIM-kortilta luonti}
-\subsection{Laitteen prosessorilta luonti}
-\subsection{Tunnistautuminen laitteella}
 
+Mobiililaite koostuu SIM-kortista ja laitteesta, jossa allekirjoituksen luonti tapahtuu prosessorilla \cite{proxy}. Tietoturvan kannalta SIM-korttia voidaan pitää parempana vaihtoehtona, mutta nopeudessa allekirjoitusten luontia koskien prosessori on tehokkaampi. Salaisen avaimen säiltyspaikka tulee kuitenkin valita turvallisesti, jotta ulkopuolinen tarkkailija ei saa tietää salaista avainta.
+ 
+\subsection{SIM-kortilta luonti}
+
+Laitteen SIM-korttia voidaan pitää turvallisimpana paikkana säilyttää salaista avainta. Digitaalisen allekirjoituksen luomisessa kuitenkin avain joudutaan hetkellisesti näyttämään laitteen käyttöjärjestelmälle. Pieni tietoturvariski on siis olemassa käyttöjärjestelmää koskien. Lisäksi SIM-kortin laskentakapasiteetti on huomattavasti pienempi kuin laitteen prosessorin. ?????? 
+
+\subsection{Laitteen prosessorilta luonti}
+
+Salaisen avaimen säilytys voi tapahtua myös laitteen muistissa. Digitaalinen allekirjoitus luodaan tällöin laitteen prosessorilla, joka on laskentateholtaan huomattavasti tehokkaampi kuin SIM-kortti. Laitteen käyttöjärjestelmässä voi kuitenkin olla tietoturva-aukko, jota hyväksikäyttäen tunkeutujat voivat saada haltuunsa käyttäjän yksityisen avaimen \cite{proxy}.
+
+\subsection{Tunnistautuminen laitteella}
+Kun käyttäjä haluaa lähettää viestin palvelimelle tai toiselle käyttäjälle, on tärkeä suosia turvallista protokollaa.
 
 \section{Palvelinpohjaiset allekirjoitukset}
 \subsection{Välityspalvelin}

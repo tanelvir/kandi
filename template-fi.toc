@@ -3,8 +3,8 @@
 \contentsline {section}{\numberline {2}Digitaalisen allekirjoituksen m\IeC {\"a}\IeC {\"a}ritelm\IeC {\"a}}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}PKI-malli}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}RSA}{2}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Mobiilikaupank\IeC {\"a}ynti}{3}{subsection.2.3}
-\contentsline {section}{\numberline {3}Laitepohjaiset allekirjoitukset}{3}{section.3}
+\contentsline {subsection}{\numberline {2.3}Mobiilikaupank\IeC {\"a}ynti}{2}{subsection.2.3}
+\contentsline {section}{\numberline {3}Laitepohjaiset allekirjoitukset}{2}{section.3}
 \contentsline {subsection}{\numberline {3.1}SIM-kortilta luonti}{3}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Laitteen prosessorilta luonti}{3}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Tunnistautuminen laitteella}{3}{subsection.3.3}
