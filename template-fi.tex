@@ -132,21 +132,16 @@ Schwabin ja Yangin mukaan mahdollisia tietoturvariskejä mobiiliympäristössä 
 Koska digitaaliset allekirjoitukset perustuvat julkisen avaimen protokollaan, on äärimmäisen tärkeää pitää salainen avain mahdollisimman piilossa. Laitteen SIM-kortti on turvallinen paikka säilyttää salaista avainta, sillä silloin se ei paljastu laitteen käyttöjärjestelmälle. Laitteen prosessorin luoma avain sekä allekirjoitus paljastuvat aina käyttöjärjestelmälle. Sen sijaan prosessorilla laskenta on nopeampaa kuin SIM-kortilla \cite{proxy}. 
 
 Sekä RSA että Diffie-Hellman käyttävät jakojäännösmenetelmää salauksessa.
-Diskreetin logaritmin avulla ulkopuolinen tunkeutuja ei voi tietää puuttuvaa alkulukua. Luvun arvaamiseen kuluisi polynomisen ajan verran nykyaikaisilla algoritmeilla. Diffie-Hellmanin algoritmia käytetään julkisen avaimen vaihtoon ja RSA puolestaan perustuu yksityisen avaimen luontiin asymmetrisen salauksen mahdollistamiseksi. Digitaalisessa allekirjoituksessa sekä datan että salauksen tiivisteen tulee olla samat, jotta voidaan varmistaa allekirjoituksen pätevyys. Tiivisteen laskemiseen käytetään erilaisia tiivistefunktioita kuten SHA-2 tai MD5 \cite{gene}.
-
-
-
-   
-      
+Diskreetin logaritmin avulla ulkopuolinen tunkeutuja ei voi tietää puuttuvaa alkulukua. Luvun arvaamiseen kuluisi polynomisen ajan verran nykyaikaisilla algoritmeilla. Diffie-Hellmanin algoritmia käytetään julkisen avaimen vaihtoon ja RSA puolestaan perustuu yksityisen avaimen luontiin asymmetrisen salauksen mahdollistamiseksi. Digitaalisessa allekirjoituksessa sekä datan että salauksen tiivisteen tulee olla samat, jotta voidaan varmistaa allekirjoituksen pätevyys. Tiivisteen laskemiseen käytetään erilaisia tiivistefunktioita kuten SHA-2 tai MD5 \cite{gene}.         
 
 
 \section{Digitaalisen allekirjoituksen määritelmä}
 
-Digitaalinen allekirjoitus on menetelmä, jolla voidaan todentaa tietyn lähettäjän lähettäneen viestin vastaanottajalle muuttumattomana. Allekirjoituksen ja datan tiivisteestä voidaan varmentaa tiedon muuttumattomuus ja todentaa lähettäjän kiistämättömyys \cite{moen}. Jos tieto allekirjoituksessa tai tiivisteessä muuttuu, vastaanottajan avaimella purettu viesti ei ole ymmärrettävässä muodossa enää. Seuraavien ehtojen on oltava voimassa allekirjoituksessa: uskottavuus, muuttumattomuus, kertakäyttöisyys ja kiistattomuus \cite{e-c}. Digitaalisella allekirjoituksella voidaan siis todentaa vain yksi viesti kerrallaan ja jokaiselle viestille on luotava uusi allekirjoitus. 
+Digitaalinen allekirjoitus on menetelmä, jolla voidaan todentaa tietyn lähettäjän lähettäneen viestin vastaanottajalle muuttumattomana. Allekirjoituksen ja datan tiivisteestä voidaan varmentaa tiedon muuttumattomuus ja todentaa lähettäjän kiistämättömyys \cite{moen}. Jos tieto allekirjoituksessa tai tiivisteessä muuttuu, vastaanottajan avaimella purettu viesti ei ole ymmärrettävässä muodossa enää. Seuraavien ehtojen on oltava voimassa allekirjoituksessa: uskottavuus, muuttumattomuus, kertakäyttöisyys ja kiistattomuus \cite{e-c}. Digitaalisella allekirjoituksella voidaan siis todentaa vain yksi viesti kerrallaan ja jokaiselle viestille on luotava uusi allekirjoitus. Menetelmä on turvallisimpia tapoja varmentaa luotettava viestinkulku vastaanottajan ja lähettäjän välillä. Sen sijaan allekirjoitus on raskan luoda, joten menetelmä vaatii merkittävää laskentatehoa toimiakseen \cite{proxy}.
 
 \subsection{PKI-malli}
 
-Julkinen ja salainen avain muodostavat PKI-mallin. Digitaalinen allekirjoitus perustuu tähän malliin ja siksi salaisen avaimen on pysyttävä vain lähettäjän hallussa. Sen sijaan julkinen avain annetaan vastaanottajalle, joka voi purkaa salatun viestin ja laskea tiivisteet. Koska avainten luomiseen käytetään monimutkaisia algoritmeja kuten RSA, on toisen identtisen avainparin syntyminen erittäin epätodennäköistä. Allekirjoitus voidaan liittää viestiin tai lähettää erillisenä \cite{moen}.
+Julkinen ja salainen avain muodostavat PKI-mallin \cite{ECC}. Digitaalinen allekirjoitus perustuu tähän malliin ja siksi salaisen avaimen on pysyttävä vain lähettäjän hallussa. Sen sijaan julkinen avain annetaan vastaanottajalle, joka voi purkaa salatun viestin ja laskea tiivisteet. Koska avainten luomiseen käytetään monimutkaisia algoritmeja kuten RSA, on toisen identtisen avainparin syntyminen erittäin epätodennäköistä. Allekirjoitus voidaan liittää viestiin tai lähettää erillisenä \cite{moen}.
 
 \subsection{RSA}
 
@@ -158,7 +153,7 @@ Mobiilikaupankäynnillä tarkoitetaan mobiililaitteella tehtäviä maksutransakt
 
 \section{Laitepohjaiset allekirjoitukset}
 
-Mobiililaite koostuu SIM-kortista ja laitteesta, jossa allekirjoituksen luonti tapahtuu prosessorilla \cite{proxy}. Tietoturvan kannalta SIM-korttia voidaan pitää parempana vaihtoehtona, mutta nopeudessa allekirjoitusten luontia koskien prosessori on tehokkaampi. Salaisen avaimen säiltyspaikka tulee kuitenkin valita turvallisesti, jotta ulkopuolinen tarkkailija ei saa tietää salaista avainta.
+Mobiililaite koostuu SIM-kortista ja laitteesta, jossa allekirjoituksen luonti tapahtuu prosessorilla. Tietoturvan kannalta SIM-korttia voidaan pitää parempana vaihtoehtona, mutta nopeudessa allekirjoitusten luontia koskien prosessori on tehokkaampi. Salaisen avaimen säilytyspaikka tulee kuitenkin valita turvallisesti, jotta ulkopuolinen tarkkailija ei saa tietää salaista avainta. Lisäksi on olemassa malli, jossa SIM-kortti ja laitteen prosessori yhdessä osallistuvat allekirjoituksen luontiin (hybridimalli) \cite{proxy}.
  
 \subsection{SIM-kortilta luonti}
 
@@ -169,20 +164,47 @@ Laitteen SIM-korttia voidaan pitää turvallisimpana paikkana säilyttää salai
 Salaisen avaimen säilytys voi tapahtua myös laitteen muistissa. Digitaalinen allekirjoitus luodaan tällöin laitteen prosessorilla, joka on laskentateholtaan huomattavasti tehokkaampi kuin SIM-kortti. Laitteen käyttöjärjestelmässä voi kuitenkin olla tietoturva-aukko, jota hyväksikäyttäen tunkeutujat voivat saada haltuunsa käyttäjän yksityisen avaimen \cite{proxy}.
 
 \subsection{Tunnistautuminen laitteella}
-Kun käyttäjä haluaa lähettää viestin palvelimelle tai toiselle käyttäjälle, on tärkeä suosia turvallista protokollaa.
+Kun käyttäjä haluaa lähettää viestin palvelimelle tai toiselle käyttäjälle, on tärkeä suosia turvallista protokollaa. On turvallista varmistaa myös oikean henkilön käyttävän laitetta, sillä ulkopuolinen varas on voinut anastaa laitteen. Käyttäjän tunnistautuminen voi perustua salasanan syöttämiseen tai visuaaliseen todennukseen. Istunto laitteen ja palvelimen välille voidaan muodostaa Diffie-Hellman protokollaa käyttäen. Yhteisellä avaimella siis hoidetaan viestien salaus. RSA on kuitenkin parempi mies välissä- hyökkäystä vastaan \cite{enti}.
 
 \section{Palvelinpohjaiset allekirjoitukset}
+
+Palvelin voi luoda digitaalisen allekirjoituksen käyttäjän puolesta, kunhan käyttäjä voidaan todentaa palvelimelle. Palvelinten rooli digitaalisten allekirjoitusten luonnissa oli merkittävä aikana, jolloin laitteessa ei ollut tarpeeksi tehoa 
+allekirjoituksen luomiseen. Nykyään laitepohjaiset allerkijoitukset ovat yleistyneet \cite{proxy}.
+
 \subsection{Välityspalvelin}
+
+Välityspalvelin toimii siis eräänlaisena kirjautumispalvelimena käyttäjän ja lopullisen palvelimen välissä. Välityspalvelin voi luoda allekirjoituksen, mutta oikean käyttäjän varmenne vaaditaan. Varmennus voi perustua algoritmeihin kuten RSA tai DSA. On myös mahdollista, että käyttäjälle tehdään varmenne, jolla hän on tunnistettavissa jatkossa palvelimelle \cite{proxy}.
+
 \subsection{NRS ja NRR}
+
+Kiistämättömyys on olennainen osa digitaalista allekirjoitusta. NRS (Non-Repudation of Sender) tarkoittaa, lähettäjä ei voi jälkikäteen kiistää lähettäneensä viestin. NRR (Non-Repudation of Receiver) puolestaan merkitsee vastaanottajan kiistämättömyyttä. Tiivistefunktioilla kuten esimerkiksi MD5:llä. Sekä lähettäjän että vastaanottajan on luotava julkiset avaimet ja merkit kirjautumispalvelimelle tunnistettavaksi. Kirjautumispalvelin pyytää varmenteen varmenneviranomaiselta ja muodostaa oman varmanteen lähettäjälle. Näin ollen kirjautumispalvelin voi jatkossa toimia vahvistavana linkkinä lähettäjän ja vastaanottajan välillä \cite{gene}.
+
+
 \subsection{Varmenteet}
 
+Varmenteet ovat tapa tunnistaa jokin käyttäjä, välityspalvelin tai lopullinen palveluntarjoaja jatkuvaa yhteydenpitoa varten. Varmenne voi olla voimassa hetken tai pidemmän aikaa, mutta tietoturvan kannalta varmenteiden ei tulisi olla ikuisia. Varmennetta voidaan pitää luotettavana, jos sen tarjoaa ulkopuolinen varmenneviranomainen. Digitaalinen allekirjoitus vaatii toimiakseen aina varmenteen, mutta varmenne voi toimia irrallisena digitaalisesta allekirjoituksesta. PKI-protokollan avulla varmenne voidaan luoda luovuttamalla julkinen avain varmenneviranomaiselle ja lähettämällä pyyntö varmenteelle. Tämän jälkeen käyttäjä vahvistaa vielä itsensä salaamalla viestinsä yksityisellä avaimellaan. Varmenneviranomainen vastaa luovuttamalla varmenteen käyttäjälle. Varmenteesen on yleensä merkitty seuraavat tiedot: voimassaoloaika, sarjanumero, versio ja käyttäjän tunniste \cite{ECC}. Vastaanottajan tulee siis ottaa huomioon vanhentunut varmenne. Koska varmenne on käyttäjäkohtainen, hyökkääjä ei tee varastetulla varmenteella mitään. 
+
 \section{Vertailu}
+
+Tehokkuus ja tietoturva ovat tärkeitä ominaisuuksia koskien digitaalisia allekirjoituksia. Vaikka nämä kaksi seikkaa eivät ole suoraan toisensa poissulkevia, on syytä ottaa huomioon kummankin prioriteetti. Erityisesti mobiililaitteilla tehokkuudesta joudutaan yleensä karsimaan, joten allekirjoituksen luonti voi viedä huomattavan ajan \cite{proxy}. 
+
 \subsection{Tietoturva}
+
+Mobiililaitteilla voidaan havaita seuraavia tietoturvariskejä: urkinta, mies välissä -hyökkäys, datan muuntaminen, toisena osapuolena esiintyminen ja laitteen kadottaminen. Urkinnalla tarkoitetaan viestien kuuntelua, mutta se voidaan torjua helposti viestin salakirjoituksella esimerkiksi väliaikaisella istuntoavaimella. Mies välissä- hyökkäys tarkoittaa kolmannen osapuolen asettumista lähettävän ja vastaanottavan osapuolten väliin. Diffie-Hellmanissa piilee tämä riski mutta ei RSA:ssa. Datan muttaminen voidaan estää salakirjoituksella sekä käyttämällä tiivistefunktioita. Toisena osapuolena tekeytyminen ja laitteen kadottaminen voidaan estää salasanan kirjoittamisella laitteelle tai visuaalisena todennuksena.
+	Julkisen avaimen protokolla eli PKI-malli toimii, jos salainen avain säilyy suojassa. Mikäli on pienikin riski, että salainen avain on jokun muun tiedossa, tulee avainpari vaihtaa heti. Niin kauan kun diskreetin logaritmin ongelmaa ei pystytä ratkaisemaan järkevässä ajassa, ovat RSA ja Diffie-Hellman turvallisia protokollia. \cite{enti}.
+	  
+
 \subsection{Tehokkuus}
+
+Suorituskyky on parantunut vuosien saatossa niin PC- kuin mobiililaitteilla. Prosessorien teknologia on kehittynyt mahdollistaen tiheämmät kellopulssit ja moniydinsuorituksen. Myös tietoliikennenopeuksien nousulla on ollut suuri merkitys digitaalisten allekirjoitusten luonnissa. Tehokkuutta tarvitaan nopeisiin allekirjoituksiin lyhyellä aikavälillä. Artikkelissa Self-Proxy Mobile Signature esitelty huutokauppasovellus tarvitsee jokaiselle huudolle allekirjoituksen lyhyen ajan sisällä. Tietoturvasta on tässä tapauksessa erittäin vaikea tinkiä, joten käyttäjä olisi hyvä luoda allekirjoitus omalta laitteeltaan. Tehokkuudessa tulee ottaa huomioon siis salauksen nopeus, tiivisteen luominen ja varmenteen hankinta \cite{proxy}. Luonnollisesti myös palvelinpuolella esimerkiksi klusterointi on luonut mahdollisuuden tehokkaisiin allekirjoitusten/varmenteiden luomiseen monelle käyttäjälle samaan aikaan.
+
 \subsection{Nykyaikaisten menetelmien käyttö}
+
+Laitepohjaiset allekirjoitukset ovat yleistynet kokoajan mobiililaitteiden laskentatehon ansiosta. RSA:n lisäksi elliptiset käyrät ovat yleistyneet niiden paremman tietoturvan ansiosta suhteessa avainten pituuteen bitteinä \cite{ECC}. AES algoritmia voidaan pitää murtumattomana, mutta DSA on murrettavissa jo muutaman bittivuodon avulla \cite{gsm}. Elliptisen käyrän DSA:ta käytetään myös \cite{webs}. 
 
 \section{Yhteenveto}  
 
+Tässä tekstissä olemme tarkastelleet digitaalisia allekirjoituksia mobiiliympäristöissä ja mobiililaitteissa. Menetelmät allekirjoitusten luontiin siis vastaavat tietokoneilla vastaavia menetelmiä. Olemma tarkastelleet PKI-mallia ja RSA algoritmia tarkemmin.
 
 
 % --- References ---

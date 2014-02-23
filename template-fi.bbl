@@ -1,4 +1,4 @@
-\begin{thebibliography}{Cam03}
+\begin{thebibliography}{XDC09}
   \providebibliographyfont{name}{}%
   \providebibliographyfont{lastname}{}%
   \providebibliographyfont{title}{\emph}%
@@ -36,6 +36,30 @@
 \newblock {\latintext
   \btxurlfont{http://dl.acm.org/citation.cfm?id=977394.977538}}.
 
+\bibitem [{RB12}]{ECC}
+\btxnamefont {\btxlastnamefont {Ray}, Sangram} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Biswas}, G.\btxfnamespacelong P.}\btxauthorcolon\
+  \btxtitlefont {\btxifchangecase {An ecc based public key infrastructure
+  usable for mobile applications}{An ECC Based Public Key Infrastructure Usable
+  for Mobile Applications}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of the Second International
+  Conference on Computational Science, Engineering and Information Technology},
+  CCSEIT '12, \btxpageslong {}\ 562--568, New York, NY, USA, 2012.
+  \btxpublisherfont {ACM}\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont
+  {978-1-4503-1310-0}}}.
+\newblock {\latintext \btxurlfont{http://doi.acm.org/10.1145/2393216.2393310}}.
+
+\bibitem [{SC12}]{gsm}
+\btxnamefont {\btxlastnamefont {Saxena}, Neetesh} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Chaudhari}, Narendra\btxfnamespacelong S.}\btxauthorcolon\
+  \btxtitlefont {\btxifchangecase {A secure approach for sms in gsm network}{A
+  Secure Approach for SMS in GSM Network}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of the CUBE International
+  Information Technology Conference}, CUBE '12, \btxpageslong {}\ 59--64, New
+  York, NY, USA, 2012. \btxpublisherfont {ACM}\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {978-1-4503-1185-4}}}.
+\newblock {\latintext \btxurlfont{http://doi.acm.org/10.1145/2381716.2381729}}.
+
 \bibitem [{SSA10}]{proxy}
 \btxnamefont {\btxlastnamefont {Samadani}, Mohammad\btxfnamespacelong Hasan},
   \btxnamefont {\btxlastnamefont {Shajari}, Mehdi}\btxandcomma {} \btxandlong
@@ -70,5 +94,15 @@
   and Technologies (EDT), 2010 International Conference on}, \btxvolumelong
   {}~\btxvolumefont {1}, \btxpageslong {}\ 366--369,
   \btxprintmonthyear{.}{April}{2010}{long}.
+
+\bibitem [{XDC09}]{webs}
+\btxnamefont {\btxlastnamefont {Xuan}, Zuguang}, \btxnamefont {\btxlastnamefont
+  {Du}, Zhenjun}\btxandcomma {} \btxandlong {}\ \btxnamefont {\btxlastnamefont
+  {Chen}, Rong}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {Comparison
+  research on digital signature algorithms in mobile web services}{Comparison
+  Research on Digital Signature Algorithms in Mobile Web Services}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Management and Service Science, 2009.
+  MASS '09. International Conference on}, \btxpageslong {}\ 1--4,
+  \btxprintmonthyear{.}{Sept}{2009}{long}.
 
 \end{thebibliography}
