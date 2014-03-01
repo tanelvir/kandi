@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Johdanto}{}% 1
+\BOOKMARK [1][-]{section.2}{Digitaalisen allekirjoituksen m\344\344ritelm\344}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Julkisen avaimen infrastruktuuri}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{RSA}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Diffie-Hellman}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Mobiilikaupank\344ynti}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Laitepohjaiset allekirjoitukset}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{SIM-kortilta luonti}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Laitteen prosessorilta luonti}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Hybridimalli}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{Tunnistautuminen laitteella}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Palvelinpohjaiset allekirjoitukset}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{V\344lityspalvelin}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{NRS ja NRR}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{Yhdistetty allekirjoitus}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.4}{Varmenteet}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Vertailu}{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{Tietoturva}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Tehokkuus}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.3}{Nykyaikaisten menetelmien k\344ytt\366}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Yhteenveto}{}% 21
+\BOOKMARK [1][-]{section*.2}{L\344hteet}{}% 22

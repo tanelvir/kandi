@@ -1,4 +1,4 @@
-\begin{thebibliography}{XDC09}
+\begin{thebibliography}{mat14b}
   \providebibliographyfont{name}{}%
   \providebibliographyfont{lastname}{}%
   \providebibliographyfont{title}{\emph}%
@@ -22,6 +22,17 @@
   International Workshops on}, \btxpageslong {}\ 238--242,
   \btxprintmonthyear{.}{June}{2003}{long}.
 
+\bibitem [{HZ04}]{joint}
+\btxnamefont {\btxlastnamefont {He}, Li\btxfnamespacelong Sha} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Zhang}, Ning}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {A new signature scheme: Joint-signature}{A New Signature
+  Scheme: Joint-signature}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Proceedings of the 2004 ACM Symposium
+  on Applied Computing}, SAC '04, \btxpageslong {}\ 807--812, New York, NY,
+  USA, 2004. \btxpublisherfont {ACM}\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {1-58113-812-1}}}.
+\newblock {\latintext \btxurlfont{http://doi.acm.org/10.1145/967900.968066}}.
+
 \bibitem [{LCJ04}]{gene}
 \btxnamefont {\btxlastnamefont {Lei}, Yu}, \btxnamefont {\btxlastnamefont
   {Chen}, Deren}\btxandcomma {} \btxandlong {}\ \btxnamefont {\btxlastnamefont
@@ -35,6 +46,24 @@
   \mbox{\btxISBN~\btxISBNfont {0-7695-2051-0}}}.
 \newblock {\latintext
   \btxurlfont{http://dl.acm.org/citation.cfm?id=977394.977538}}.
+
+\bibitem [{mat14a}]{math2}
+\btxtitlefont {\btxifchangecase {Diffie-hellman protocol}{Diffie-Hellman
+  Protocol}}, \btxprintmonthyear{.}{2}{2014}{long}.
+\newblock {\latintext
+  \btxurlfont{http://mathworld.wolfram.com/Diffie-HellmanProtocol.htmll}}.
+
+\bibitem [{mat14b}]{math1}
+\btxtitlefont {\btxifchangecase {Rsa encryption}{RSA Encryption}},
+  \btxprintmonthyear{.}{2}{2014}{long}.
+\newblock {\latintext
+  \btxurlfont{http://mathworld.wolfram.com/RSAEncryption.html}}.
+
+\bibitem [{nis14}]{nist}
+\btxtitlefont {\btxifchangecase {Sha-3 standardization}{SHA-3
+  STANDARDIZATION}}, \btxprintmonthyear{.}{2}{2014}{long}.
+\newblock {\latintext
+  \btxurlfont{http://csrc.nist.gov/groups/ST/hash/sha-3/sha-3_standardization.html/}}.
 
 \bibitem [{RB12}]{ECC}
 \btxnamefont {\btxlastnamefont {Ray}, Sangram} \btxandlong {}\ \btxnamefont

@@ -1,0 +1,27 @@
+\select@language {finnish}
+\contentsline {section}{\numberline {1}Johdanto}{1}{section.1}
+\contentsline {section}{\numberline {2}Digitaalisen allekirjoituksen m\IeC {\"a}\IeC {\"a}ritelm\IeC {\"a}}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Julkisen avaimen infrastruktuuri}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}RSA}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Diffie-Hellman}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Mobiilikaupank\IeC {\"a}ynti}{4}{subsection.2.4}
+\contentsline {section}{\numberline {3}Laitepohjaiset allekirjoitukset}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}SIM-kortilta luonti}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Laitteen prosessorilta luonti}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Hybridimalli}{5}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Tunnistautuminen laitteella}{5}{subsection.3.4}
+\contentsline {section}{\numberline {4}Palvelinpohjaiset allekirjoitukset}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}V\IeC {\"a}lityspalvelin}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}NRS ja NRR}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Yhdistetty allekirjoitus}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Varmenteet}{6}{subsection.4.4}
+\contentsline {section}{\numberline {5}Vertailu}{7}{section.5}
+\contentsline {subsection}{\numberline {5.1}Tietoturva}{7}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Tehokkuus}{7}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Nykyaikaisten menetelmien k\IeC {\"a}ytt\IeC {\"o}}{8}{subsection.5.3}
+\contentsline {section}{\numberline {6}Yhteenveto}{8}{section.6}
+\contentsline {section}{L\IeC {\"a}hteet}{10}{section*.2}
+\select@language {finnish}
+\select@language {finnish}
+\select@language {finnish}
+\select@language {finnish}
