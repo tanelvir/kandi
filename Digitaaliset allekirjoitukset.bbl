@@ -51,7 +51,7 @@
 \btxtitlefont {\btxifchangecase {Diffie-hellman protocol}{Diffie-Hellman
   Protocol}}, \btxprintmonthyear{.}{2}{2014}{long}.
 \newblock {\latintext
-  \btxurlfont{http://mathworld.wolfram.com/Diffie-HellmanProtocol.htmll}}.
+  \btxurlfont{http://mathworld.wolfram.com/Diffie-HellmanProtocol.html}}.
 
 \bibitem [{mat14b}]{math1}
 \btxtitlefont {\btxifchangecase {Rsa encryption}{RSA Encryption}},
@@ -63,7 +63,7 @@
 \btxtitlefont {\btxifchangecase {Sha-3 standardization}{SHA-3
   STANDARDIZATION}}, \btxprintmonthyear{.}{2}{2014}{long}.
 \newblock {\latintext
-  \btxurlfont{http://csrc.nist.gov/groups/ST/hash/sha-3/sha-3_standardization.html/}}.
+  \btxurlfont{http://csrc.nist.gov/groups/ST/hash/sha-3/sha-3_standardization.html}}.
 
 \bibitem [{RB12}]{ECC}
 \btxnamefont {\btxlastnamefont {Ray}, Sangram} \btxandlong {}\ \btxnamefont

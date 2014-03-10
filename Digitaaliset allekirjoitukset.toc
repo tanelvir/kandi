@@ -1,13 +1,14 @@
 \select@language {finnish}
 \contentsline {section}{\numberline {1}Johdanto}{1}{section.1}
 \contentsline {section}{\numberline {2}Digitaalisen allekirjoituksen m\IeC {\"a}\IeC {\"a}ritelm\IeC {\"a}}{2}{section.2}
-\contentsline {subsection}{\numberline {2.1}Julkisen avaimen infrastruktuuri}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}RSA}{3}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Diffie-Hellman}{3}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Mobiilikaupank\IeC {\"a}ynti}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.1}Toiminta}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Julkisen avaimen infrastruktuuri}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}RSA}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Diffie-Hellman}{3}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Mobiilikaupank\IeC {\"a}ynti}{4}{subsection.2.5}
 \contentsline {section}{\numberline {3}Laitepohjaiset allekirjoitukset}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}SIM-kortilta luonti}{5}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Laitteen prosessorilta luonti}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Laitteen prosessorilla luonti}{5}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Hybridimalli}{5}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Tunnistautuminen laitteella}{5}{subsection.3.4}
 \contentsline {section}{\numberline {4}Palvelinpohjaiset allekirjoitukset}{5}{section.4}
