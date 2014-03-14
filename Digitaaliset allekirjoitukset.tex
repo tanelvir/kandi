@@ -165,7 +165,7 @@ $$ M = E^d \pmod{n} $$
 Luvut $n, e$ ja $d$ eivät saa olla pääteltävissä toisistaan. Diskreettinen logaritmi mahdollistaa sen, että ilman puuttuvaa tekijää ei voi päätellä toista. Edellä esitellyt kaavat ovat haettu Wolfram Mathworldistä. \cite{math1}
 
 
-\subsection{Diffie-Hellman}
+\subsection{Diffien ja Hellmanin menetelmä}
 
 Aivan RSA:n tavoin Diffie-Hellman algoritmi käyttää modulaariaritmetiikkaa avainten luonnissa. Diffie-Hellman perustuu yhteen yhteiseen avaimeen, jolla viestittävät osapuolet voivat salata ja purkaa viestit toisillensa. Käyttötarkoitus on vain erilainen. RSA:ta käytetään digitaalisen allekirjoituksen luontiin, mutta Diffie-Hellman on tarkoitettu käyttäjien tunnistamiseen aluksi. Kyseessä on siis symmetrinen salaustyyppi. Diffie-Hellman tietoturvaltaan on altis välimieshyökkäykselle, sillä kolmas osapuoli on voinut saada yhteisen ennalta sovitun avaimen haltuunsa. Protokolla toimii yksinkertaisuudessaan seuraavalla tavalla Wolframin mukaan \cite{math2}.
 
@@ -199,7 +199,7 @@ Hybridimallissa salainen avain joudutaan hetkellisesti paljastamaan laitteen kä
 
 
 \subsection{Tunnistautuminen laitteella}
-Kun käyttäjä haluaa lähettää viestin palvelimelle tai toiselle käyttäjälle, on tärkeää suosia turvallista protokollaa. On turvallista varmistaa myös oikean henkilön käyttävän laitetta, sillä ulkopuolinen varas on voinut anastaa laitteen. Käyttäjän tunnistautuminen voi perustua salasanan syöttämiseen tai visuaaliseen todennukseen. Istunto laitteen ja palvelimen välille voidaan muodostaa Diffie-Hellmanin protokollaa käyttäen. Viestit salataan yhteisellä avaimella. RSA on kuitenkin parempi välimieshyökkäystä vastaan.
+Kun käyttäjä haluaa lähettää viestin palvelimelle tai toiselle käyttäjälle, on tärkeää suosia turvallista protokollaa. On turvallista varmistaa myös oikean henkilön käyttävän laitetta, sillä ulkopuolinen varas on voinut anastaa laitteen. Käyttäjän tunnistautuminen voi perustua salasanan syöttämiseen tai visuaaliseen todennukseen. Istunto laitteen ja palvelimen välille voidaan muodostaa Diffien ja Hellmanin protokollaa käyttäen. Viestit salataan yhteisellä avaimella. RSA on kuitenkin parempi välimieshyökkäystä vastaan.
 
 \section{Palvelinpohjaiset allekirjoitukset}
 

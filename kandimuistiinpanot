@@ -1,0 +1,29 @@
+﻿kanditutkielma:
+kypsyysnäyte: palaute kieliasusta vain
+ensi viikolla tietotekniikan kirjastotyöntekijä neuvomassa(20.01) klo 12.
+Karvi: Tiistaina klo 10.00
+lauantaina klo 23.59 1.2. referaatin palautus, 
+varmenne parempi termi kuin sertifikaatti = 
+julkinen avain ja yksityinen avain palvelunvirhe allekirjautuminen,
+hash = tiiviste, ketju, 
+väliotsikot boldilla, korostukset tekstissä italicsilla,
+suomen kielen pilkutus, 
+ 
+ensi viikolle (8), johdantoa + jotakin muuta kappaletta, 
+protkollan teknistä ominaisuuksia ei tarvitse kovinkaan tarkkaan mainite, 
+
+miten käytetään voidaan sanaa?
+viitteet kirjoittajaan?
+milloin kirjoittaajaan tulee ensi sijassa viitata?
+mitä voidaan lukijan olettaa tietävän?
+nimi ympäristö vai laitteet?
+se sanan käyttö?
+riittääkö allekirjoitussanan käyttö?
+mikä on johdannon funktio?
+onko luvussa jokin selkeä rakenne? tiivistelmä lopussa vai luvuttain?
+viittaus omaan artikeliin?
+
+
+
+
+varmenteista lisää, viesti lisäksi voidaan salataan AES-algoritmilla, viestin tiiviste on sama kuin allekirjoitettu tiiviste, verifioi viestin lähettäjän lähettämälä julkisella avaimella, korostaa salauksen olevan liittymätön allekijroitukseen, satunnainen valinta estää identtisen avainparin synnyn, merkitään euleria ei tarvitse mainita, suhteellinen luku fii(n), e:llä ja vähennettynä yhdellä, on jaollinen mod fii(n), ei kongurenssirelaatio, salainen avain d vast.m diksreetti logaritmi mahdollistaa E:stä ja e:stä ei voi päätellä M:mmää eli viestiä, tekijöiden jaon hankaluus, n:stä ei voi päätellä p tai q:ta, tekiöihin jako on vaikea ongelma on yhtä vaikea ongelma kuin dikskreetti logaritmi, koska fii(n) saadaan selville p-1 ja q-1, pelkkä viite, MAC- voidaan käyttää todentamiseen, allekirjoitukset ovat laskennallesesti rakaista, joten niitä käytetään vain yleensä istunnon alussa todentamiseen, istunnon aikana diffie-hellman tai mac-funktiota, mac-funktion yhteinen salaisuus saadaan selville diffie-hellmanilla, digitaaliset todennukset mobiiliympäristössä, generointi, digitaalisella allekirjoituksella todennus käyttäen mac-funktiota dh-algoritmilla, perusversio, autentikointia, Diffien ja Hellmanin menetelmä (DH),  

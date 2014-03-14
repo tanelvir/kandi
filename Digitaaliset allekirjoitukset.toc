@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {2.2}Salaus}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Julkisen avaimen infrastruktuuri}{3}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}RSA}{3}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Diffie-Hellman}{3}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.5}Diffien ja Hellmanin menetelm\IeC {\"a}}{3}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}Mobiilikaupank\IeC {\"a}ynti}{4}{subsection.2.6}
 \contentsline {section}{\numberline {3}Laitepohjaiset allekirjoitukset}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}SIM-kortilta luonti}{5}{subsection.3.1}
