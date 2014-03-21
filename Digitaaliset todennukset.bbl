@@ -89,6 +89,17 @@
   \mbox{\btxISBN~\btxISBNfont {978-1-4503-1185-4}}}.
 \newblock {\latintext \btxurlfont{http://doi.acm.org/10.1145/2381716.2381729}}.
 
+\bibitem [{SCP12}]{MAC}
+\btxnamefont {\btxlastnamefont {Saxena}, N.}, \btxnamefont {\btxlastnamefont
+  {Chaudhari}, N.S.}\btxandcomma {} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Prajapati}, G.L.}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {An extended approach for sms security using authentication
+  functions}{An extended approach for SMS security using authentication
+  functions}}.
+\newblock \Btxinlong {}\ \btxtitlefont {Industrial Electronics and Applications
+  (ICIEA), 2012 7th IEEE Conference on}, \btxpageslong {}\ 663--668,
+  \btxprintmonthyear{.}{July}{2012}{long}.
+
 \bibitem [{SSA10}]{proxy}
 \btxnamefont {\btxlastnamefont {Samadani}, Mohammad\btxfnamespacelong Hasan},
   \btxnamefont {\btxlastnamefont {Shajari}, Mehdi}\btxandcomma {} \btxandlong

@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: Digitaaliset todennukset.aux
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Digitaaliset todennukset.aux
 The style file: babalpha-lf.bst
 Database file #1: viitteet.bib
 Warning--entry type for "nist" isn't style-file defined
@@ -7,8 +9,51 @@ Warning--entry type for "math1" isn't style-file defined
 --line 146 of file viitteet.bib
 Warning--entry type for "math2" isn't style-file defined
 --line 153 of file viitteet.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--to sort, need author or key in nist
 Warning--to sort, need author or key in math1
 Warning--to sort, need author or key in math2
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty language in moen
+You've used 13 entries,
+            3208 wiz_defined-function locations,
+            785 strings with 9111 characters,
+and the built_in function-call counts, 7143 in all, are:
+= -- 708
+> -- 206
+< -- 12
++ -- 73
+- -- 68
+* -- 694
+:= -- 926
+add.period$ -- 38
+call.type$ -- 13
+change.case$ -- 75
+chr.to.int$ -- 12
+cite$ -- 20
+duplicate$ -- 386
+empty$ -- 664
+format.name$ -- 111
+if$ -- 1605
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 10
+newline$ -- 74
+num.names$ -- 30
+pop$ -- 110
+preamble$ -- 1
+purify$ -- 88
+quote$ -- 0
+skip$ -- 303
+stack$ -- 0
+substring$ -- 377
+swap$ -- 170
+text.length$ -- 12
+text.prefix$ -- 1
+top$ -- 0
+type$ -- 104
+warning$ -- 4
+while$ -- 55
+width$ -- 15
+write$ -- 176
 (There were 7 warnings)
