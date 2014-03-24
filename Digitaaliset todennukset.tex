@@ -124,7 +124,7 @@
 
 % Write some science here.
 
-Digitaalisten allekirjoitusten käyttö on noussut huomattavasti mobiililaitteilla nykypäivänä. Mobiiliympäristössä turvallinen yhteys on varmistettava, koska tietoturvariskit langattomissa verkoissa ovat erittäin suuret \cite{enti}. Teknisen kehityksen ansiosta allekirjoituksia voidaan luoda yleisesti mobiililaitteilla ja parempi tietoturva on mahdollistanut useiden sovellusten käytön. Tietokonelaitteistolla käytettävät protokollat kuten esimerkiksi PKI-malli (julkisen avaimen infrastruktuuri) ovat siirtyneet mobiiliympäristöön sellaisenaan, eivätkä nämä protokollat ole tarvinneet suuria muutoksia toimiakseen. Kehittyneemmän laskentatehon ansiosta monet algoritmit kuten RSA sekä Diffien ja Hellmanin menetelmä ollaan pystytty ottamaan käyttöön kannettavilla laitteilla \cite{enti}. Palvelimille voidaan silti delegoida operaatiot, joita laitteella ei pystytä suorittamaan. Allekirjoitus voidaan luoda tarvittaessa palvelimella tai asiakkaan laitteessa, mutta allekirjoituksen tulee täyttää kaikki sille asetetut ehdot tietoturvaa koskien. Palvelinpohjaisen allekirjoituksen yleensä luo välissä oleva kirjautumispalvelin eikä lopullinen palveluntarjoaja \cite{proxy}.
+Digitaalisten allekirjoitusten käyttö on noussut huomattavasti mobiililaitteilla nykypäivänä. Mobiiliympäristössä turvallinen yhteys on varmistettava, koska tietoturvariskit langattomissa verkoissa ovat erittäin suuret \cite{enti}. Teknisen kehityksen ansiosta allekirjoituksia voidaan luoda yleisesti mobiililaitteilla ja parempi tietoturva on mahdollistanut useiden sovellusten käytön. Tietokonelaitteistolla käytettävät protokollat kuten esimerkiksi PKI-malli (julkisen avaimen infrastruktuuri) ovat siirtyneet mobiiliympäristöön sellaisenaan, eivätkä nämä protokollat ole tarvinneet suuria muutoksia toimiakseen. Kehittyneemmän laskentatehon ansiosta monet algoritmit kuten RSA sekä Diffien ja Hellmanin menetelmä ollaan pystytty ottamaan käyttöön kannettavilla laitteilla \cite{enti}. Yhteiseen salaisuuteen perustuva MAC-funktio on myös käytössä tekstiviestien (SMS) lähettämisessä \cite{MAC}. Palvelimille voidaan silti delegoida operaatiot, joita laitteella ei pystytä suorittamaan. Allekirjoitus voidaan luoda tarvittaessa palvelimella tai asiakkaan laitteessa, mutta allekirjoituksen tulee täyttää kaikki sille asetetut ehdot tietoturvaa koskien. Palvelinpohjaisen allekirjoituksen yleensä luo välissä oleva kirjautumispalvelin eikä lopullinen palveluntarjoaja \cite{proxy}.
 
 Digitaalisten allekirjoitusten käyttö mobiiliympäristössä tulisi olla nopeaa ja turvallista. Monet nykyaikaiset sovellukset vaativat jokaisen viestin lähetyksen yhteydessä uuden allekirjoituksen. Esimerkkinä tästä voisi toimia eräänlainen huutokauppasovellus, jossa jokaisen huudon on oltava kiistaton ja todennettu. Lisäksi viestin sisältämän datan tulee olla eheää. \cite{proxy}
 
@@ -174,9 +174,17 @@ Diffien ja Hellmanin menetelmää voidaan käyttää istuntoavaimen luomiseen yh
 
 \subsection{MAC-funktio}
 
-DH:n ollessa altis välimieshyökkäykselle tarvitaan menetelmä yhteisen salaisuuden tiedon vaihtoon. Tähän soveltuu MAC-funktio (Message Authentication Code). MAC-funktiolla luodaan tiiviste, jonka vastaanottaja laskee yksityisellä avaimellaan. Jos tiivisteen arvo on odotettu oikea, on viesti saapunut eheänä perille. Aivan kuten allekirjoituksissakin viestin tiiviste salataan aluksi esimerkiksi AES-salausta käyttäen. Sen jälkeen lasketaan salasana käyttäen jotain julkista tunnettua MAC-funktiota. Lopuksi viestiin liitetään kyseinen laskettu salasana ja salataan viesti jollakin tiivistefunktiolla. 
+DH:n ollessa altis välimieshyökkäykselle tarvitaan luotettava menetelmä yhteisen salaisuuden vaihtoon. Tähän soveltuu MAC-funktio (Message Authentication Code). MAC-funktiolla luodaan tiiviste, jonka vastaanottaja laskee yksityisellä avaimellaan. Jos tiivisteen arvo on odotetusti oikea, on viesti saapunut eheänä perille. Aivan kuten allekirjoituksissakin viesti salataan aluksi esimerkiksi AES-salausta käyttäen. Sen jälkeen lasketaan salasana käyttäen jotain julkista tunnettua MAC-funktiota. Lopuksi viestiin liitetään kyseinen laskettu salasana ja luodaan tiiviste jollakin tiivistefunktiolla.
 
-asd	\cite{MAC}
+Toimivalle MAC-funktiolle on olemassa selkeät ehdot. Jokaiselle viestille on oltava erilainen pätevä tiiviste. Viestiä ei voi lähettää uudelleen samalla tiivisteellä, eikä samalla tiivisteellä pysty lähettämään erilaista viestiä. Lähettäjä luo tiivisteen $t$ MAC-funktiolla $S(k,m) = t$. Viesti $m$ salataan siis yhteisesti tunnetulla avaimella $k$ vastaanottajan kanssa. Avain on voitu sopia aikaisemmin esimerkiksi Diffien ja Hellmanin menetelmällä. Vastaanottaja puolestaan verifioi viestin funktiolla $V(k, m, t)$. Jos verifioinnista tulee odotettu arvo lopputulokseksi, lähetys on onnistunut. \cite{MACA} 
+ 
+Salasanan vaihto onnistuu MAC-funktiolla. Esimerkkinä voitaisiin ottaa käyttäjä A ja B. Luku $q$ on jokin tunnettu alkuluku. Luku $n$ on primitiivijuuri luvulle $p$. Lisäksi $n$:nän on oltava pienempi kuin luku $q$. A:lla on salainen avain 'a' ja B:llä 'b'. Tämän lisäksi julkinen avain 'x' on A:lla ja avain 'y' B:llä. Alla oleva Saxenan, Chaudharin ja Prajatin \cite{MAC} esittelemä protokolla selittää salasananvaihtoa tarkemmin.
+
+\includegraphics[scale=0.5]{MAC-salasana}
+
+Yhteisenä avaimena toimii siis 'k', jolla toisen osapuolen lähettämä salasana lasketaan. MAC-funktiolla tässä tapauksessa lasketaan salasana julkisille avaimille ja tiiviste salasanalle lähetystä varten.
+
+
 
 
 \subsection{Mobiilikaupankäynti}
@@ -202,9 +210,12 @@ Salaisen avaimen säilytys voi tapahtua myös laitteen muistissa. Digitaalinen a
 Hybridimallissa salainen avain joudutaan hetkellisesti paljastamaan laitteen käyttöjärjestelmälle. Tässä menetelmässä on siis olemassa pieni tietoturvariski. Hyvänä puolena hybridimallissa on sen lähes yhtä nopea tehokkuus kuin prosessorilla luonnissa. Monet graafisen käyttöliitymän vaativat ohjelmat tarvitsevat prosessorin laskentatehoa, mutta SIM-kortti voi toimia tietoturvan kannalta avaimen yleisenä säilytyspaikkana. Mallissa allekirjoitus siis luodaan prosessorilla, jolloin salaista avainta käytetään vain hetkellisesti laitteessa.
 
 
-
 \subsection{Tunnistautuminen laitteella}
-Kun käyttäjä haluaa lähettää viestin palvelimelle tai toiselle käyttäjälle, on tärkeää suosia turvallista protokollaa. On turvallista varmistaa myös oikean henkilön käyttävän laitetta, sillä ulkopuolinen varas on voinut anastaa laitteen. Käyttäjän tunnistautuminen voi perustua salasanan syöttämiseen tai visuaaliseen todennukseen. Istunto laitteen ja palvelimen välille voidaan muodostaa Diffien ja Hellmanin protokollaa käyttäen. Viestit salataan yhteisellä avaimella. RSA on kuitenkin parempi välimieshyökkäystä vastaan.
+Kun käyttäjä haluaa lähettää viestin palvelimelle tai toiselle käyttäjälle, on tärkeää suosia turvallista protokollaa. On turvallista varmistaa myös oikean henkilön käyttävän laitetta, sillä ulkopuolinen varas on voinut anastaa laitteen. Käyttäjän tunnistautuminen voi perustua salasanan syöttämiseen tai visuaaliseen todennukseen. Istunto laitteen ja palvelimen välille voidaan muodostaa Diffien ja Hellmanin protokollaa käyttäen. Viestit salataan yhteisellä avaimella. RSA on kuitenkin parempi välimieshyökkäystä vastaan. 
+
+\subsection{Tunnistautuminen GSM-verkossa}
+
+Verkossa on tärkeää, että viestin lähettäjä tietää lähettävänsä viestin oikealle kohteelle ja vastaanottaja tietää saavansa viestin oikealta lähettäjältä. Jaiswal ja Kumar \cite{cell} esittelevät GSM-verkon toimintaa kahden mobiililaitteen käyttäjän näkökulmasta. Tähän väliin tarvitaan pääsolmu, joka luo yhteisen avaimen osapuolille viestien vaihtoa varten. Verkko voidaan jakaa useampaan kenttään, jossa jokaisessa on oltava vähintään yksi pääsolmu laitteiden tunnistautumista varten. Pääsolmun on tiedettävä kaikki oman kenttänsä laitteet ja muita pääsolmuja tiedon vaihtoa varten. Pääsolmun luo yhteisen avaimen osapuolille tulevaa tiedonvaihtoa varten tunnistetietojen perusteella. Pääsolmu tarvitsee laitteilta tärkeät tiedot tunnistamiseen parametrien ja sijainnin avulla. Tiedonkeruun jälkeen pääsolmu luo yhteisen avaimen osapuolille tulevaa kommunikaatiota varten. Avaimella voi hoitaa viestien salauksen ja tiivisteen käytön.
 
 \section{Palvelinpohjaiset allekirjoitukset}
 
@@ -221,6 +232,16 @@ Kiistämättömyys on olennainen osa digitaalista allekirjoitusta. NRS (Non-Repu
 \subsection{Yhdistetty allekirjoitus}
 
 Laitteella pystyy delegoimaan allekirjoituksen luonnin palvelimelle kokonaan, osittain tai valtakirjalla. Välityspalvelin voi kokonaan luoda allekirjoituksen käyttäjän salaisella avaimella. Tämä tyyppi ei ole tietoturvan kannalta suotavaa. Osittaisessa allekirjoituksessa käyttäjä luo omasta salaisesta avaimestaan välityspalvelimelle uuden avaimen. Välityspalvelimella on tällöin mahdollisuus tehdä allekirjoitus käyttäjän puolesta. Kiistattomuus nousee näissä kahdessa menetelmässä ongelmaksi. Vastaanottaja ei voi tietää, onko allekirjoitus tullut välityspalvelimelta vai käyttäjältä. Kolmas menetelmä on valtakirjan luovuttaminen välityspalvelimelle. Käyttäjä siis kertoo valtakirjallaan luovuttaneensa allekirjoitusoikeuden toiselle palvelimelle. Valtakirja luodaan käyttäjän salaisella avaimella. Valtakirjan laatiminen saattaa viedä huomattavasti aikaa ja paljon laskentatehoa. \cite{joint}
+
+\subsection{Tekstiviestitodennus}
+
+Langattomien lähiverkkotekniikoiden yleistymisestä huolimatta tekstiviestillä (SMS) voidaan todentaa käyttäjä. Tarvitaan vain terminaaliemulaattori (T) käyttäjän laitteelle ja turvallinen yhteydenmuodostusportti (GW) kommunikaatiota varten. Terminaali voi olla laitteella erillinen ohjelma tai suoraan integroitu SIM-kortilla oleviin työkaluihin. GW koostuu todennuspalvelimesta ja tietokantapalvelimesta. Todennuspalvelin varmistaa oikean ohjelman käyttävän palvelua ja tietokantapalvelin hallinnoi käyttäjän julkista avainta sekä GW:n salaista avainta.
+
+Sekä T:n että GW:n on luotava tunnistemuuttuja (VF), jolla osapuolet todentavat toisensa. Muuttuja voi olla esimerkiksi tietyn pituinen tiiviste, joka perustuu satunnaislukuihin. Lähtevät paketit luonnollisesti salataan. Oletetaan tiivisteen nimeksi vaikka Nc. Terminaali tekee yhteydenmuodostuspyynnön REQ1, jossa on mukana Nc. GW tutkii pyynnön ja tarkistaa käyttäjän identiteetin sekä puhelinnumeron. Tietokantakyselyllä GW varmistaa käyttäjän löytyvän tietokannasta. GW luo oman VF:n nimeltä Ns ja istuntoavaimen nimeltä Ks. Nämä molemmat muuttujat sekä aiemman Nc:n GW allekirjoittaa salaisella avaimellaan. ACK1-vastauksessa GW hyväksyy yhteydenmuodostuksen ja lähettää salatussa muodossa Nc:n, Ns:sän ja Ks:sän. Tämän jälkeen T:llä allekirjoitetaan saapunut ACK1-vastaus käyttäjän salaisella avaimella. Jos allekirjoitettu Nc' on sama kuin käyttäjän alunperin lähettämä Nc-muuttuja, T salaa Ks:sän ja Ns:sän uudessa pyyntöviestissä REQ2 ja hoitaa lähetyksen. Nyt puolestaan GW allekirjoittaa Ns:n. Mikäli Ns' on sama kuin alunperin lähetetty Ns, yhteys käyttäjän ja palvelimen välille on luotu ja GW lähettää terminaalille kuittauksen ACK2 yhteydenmuodostuksen onnistumisesta. Alla oleva kuva kertoo tarkemmin protokollasta.   
+
+\includegraphics[scale=0.4]{sms-todennus}
+
+Edellä esitelty menetelmä perustuu Shun, Tanin ja Wangin \cite{sms} tutkimuksiin turvallisesta mobiilikäyttäjän todentamisesta. Koska protokolla perustu satunnaisiin muuttujiin, se on resistanssi välimieshyökkäykselle. Myös kiistämättömyys luodaan, sillä käyttäjän salainen avain säilyy vain laitteessa ja terminaali käyttää avainta. Tätä kyseistä protokollaa voidaan siis pitää yhdistettynä mallina palvelin- ja laitepohjaisesta allekirjoituksesta.
 
 
 \subsection{Varmenteet}
