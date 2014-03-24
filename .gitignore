@@ -213,3 +213,15 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#############
+## LaTeX
+#############
+
+*.aux
+*.bbl
+*.synctex.gz
+*.out
+*.blg
+*.txt
+*.toc
