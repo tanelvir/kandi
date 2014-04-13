@@ -162,7 +162,7 @@ Internetin laajentuessa ympäri maailmaa 1990-luvun alkupuolella monet sähköis
 
 Algoritmien tulkinta vaatii pohjaksi tietämystä matemaattisista funktioista. Kongruenssirelaatiolla merkitään monia kaavoja, joissa käytetään modulaarista aritmetiikkaa. Kongruenssirelaatio eli merkki $\equiv$ tarkoittaa kahden luvun $b$ ja $c$ erotuksen jaollisuutta luvulla $m$. Laskusta $(b - c)/m$ täytyy tulla lopputulokseksi kokonaisluku. Voidaan siis merkitä $b \equiv c \pmod{m}$, jonka laskettua saadaan tulokseksi 0. Todetaan siis luvun $b$ olevan kongruentti $c$:n kanssa $\pmod{m}$. Esimerkiksi luku 6 on kongruentti 9 $\pmod{3}$. Merkitään 6 $\equiv $ 9$ \pmod{3}$, koska 6 - 9 $\pmod{3}$ = -3 $\pmod{3}$ eli 0. \cite{cong}
 
-Keskenään jaottomien lukujen (suhteellinen alkuluku) idea perustuu siihen, että toista lukua ei voi päätellä toisesta jakojäännösten perusteella. Tämä sama sääntö pätee myös potenssiin korotuksissa. Oletetaan lukujen $p$ ja $q$ olevan alkulukuja. Koska gcd$(p, q)$ = 1, niin positiivisilla eksponenteilla $m$ ja $n$ sääntö ei muutu. Voidaan todeta siis aina alkuluvulla itsellään kertomisen säilyttävän suurinpana yhteisenä tekijänä luvun 1 eli gcd$(p^m, q^n)$ = 1. \cite{rel}  
+Keskenään jaottomien lukujen (suhteellinen alkuluku) idea perustuu siihen, että toista lukua ei voi päätellä toisesta jakojäännösten perusteella. Tämä sama sääntö pätee myös potenssiin korotuksissa. Oletetaan lukujen $p$ ja $q$ olevan alkulukuja. Koska gcd$(p, q)$ = 1, niin positiivisilla eksponenttien korotuksilla $m$ ja $n$ tämä sääntö ei muutu. Voidaan todeta siis aina alkuluvulla itsellään kertomisen säilyttävän suurinpana yhteisenä tekijänä luvun 1 eli gcd$(p^m, q^n)$ = 1. \cite{rel}  
 
 RSA:ssa käytettävä Eulerin funktio eli $\phi(n)$ kertoo niiden positiivisten kokonaislukujen $k$ lukumäärän ehdolla $1 \leq k \leq n$, joiden suurin yhteinen tekijä $n$:nän kanssa on 1. Eli luku $k$ ja luku $n$ ovat tällöin suhteellisia alkulukuja keskenään. Esimerkiksi $\phi(12) = 4$ sillä lukujen 1,5,7 ja 11 ainoa yhteinen tekijä luvun 12 kanssa on 1. Jos kyseessä on alkuluku $p$, sille on olemassa aina  keskenään jaottomia lukuja $p - 1$ verran. Voidaan todeta $\phi(p) = p -1$. Eulerin funktiota tarvitaan diskreetin logaritmin etsimisessä, jolla muodostetaan avainparit RSA:ssa. \cite{tot}
 	
@@ -281,7 +281,7 @@ Koska protokolla perustu satunnaisiin muuttujiin, se on resistanssi välimieshy�
 
 \section{Turvallinen etäyhteys}
 
-On tilanteita, joissa käyttäjä haluaa muodostaa suoran yhteyden palvelimelle tai toiseen tietokoneeseen. Tällöin jatkuva viestien todentaminen osapuolten välillä käy rasittavaksi. Sen sijaan tiedon salausta on korostettava ja käytettävän verkon turvallisuutta. Voidaan muodostaa mobiililaitteen ja palvelimen välille virtuaalinen erillisverkko (VPN), jossa käyttäjä tunnistautuu palveluntarjoajalle erillisen VPN-palvelimen avulla. Osapuolten on sovittava yhteisistä standardeista ja protokollista yhteyden muodostamisen ajaksi.
+On tilanteita, joissa käyttäjä haluaa muodostaa suoran yhteyden palvelimelle tai toiseen tietokoneeseen. Tällöin jatkuva viestien todentaminen osapuolten välillä käy rasittavaksi. Sen sijaan tiedon salausta on korostettava, ja käytettävän verkon turvallisuudesta huolehdittava. Voidaan muodostaa mobiililaitteen ja palvelimen välille virtuaalinen erillisverkko (VPN), jossa käyttäjä tunnistautuu palveluntarjoajalle erillisen VPN-palvelimen avulla. Osapuolten on sovittava yhteisistä standardeista ja protokollista yhteyden muodostamisen ajaksi.
 
 \subsection{Salattu VPN-yhteys}
 
@@ -289,9 +289,27 @@ Yu, Chen ja Tan \cite{vpn} esittelevät turvallisen käytännön mobiililaitteel
 
 \includegraphics[scale=0.5]{VPN-tunneli}
 
-Mobiililaitteella tulee olla työkalut VPN-yhteyden, varmenteiden ja SIM-kortin hallintaan. Lisäksi salauksen/purkamisen asetuksia on päästävä muuntamaan. VPN-palvelimella taas turvallisuusjärjestelmä (SAS), jossa on työkalut portin yhteysasetuksiin, yhteys varmenneviranomaisiin, salaus- tai purkuasetukset ja käyttäjiin liittyvät hallintamekanismit. VPN-yhteys muodostetaan käyttäjän terminaalin ja  VPN-portin välille. Palveluntarjoajalla ja VPN-palvelimella on omat protokollat yhteyttänsä varten.
+Mobiililaitteella tulee olla työkalut VPN-yhteyden, varmenteiden ja SIM-kortin hallintaan. Lisäksi salauksen/purkamisen asetuksia on päästävä muuntamaan. VPN-palvelimella on turvallisuusjärjestelmä (SAS), jossa on työkalut portin yhteysasetuksiin, yhteys varmenneviranomaisiin, salaus- tai purkuasetukset ja käyttäjätileille liittyvät hallintamekanismit. VPN-yhteys muodostetaan käyttäjän terminaalin ja  VPN-portin välille. Palveluntarjoajalla ja VPN-palvelimella on omat protokollat yhteyttänsä varten.
 
 VPN-yhteyden voi muodostaa käyttäen WLAN:ia tai GPRS:ää. Käyttäjän yhteydenmuodostuspyynnöt VPN-porttiin muistuttavat TCP-protokollaa (Transmission Control Protocol). Istuntoa varten sovitaan protokollien versoista, istunnon tunnisteesta, salausavaimesta ja käytettävistä funktioista. SSL-yhteys luodaan, kun käyttäjä on todennettu VPN-palvelimen turvallisuusjärjestelmän avulla. Seuraavaksi tarkastetaan käyttäjän oikeudet palveluun. Palveluntarjoaja antaa tarvittavan ohjelmatiedon käyttäjälle VPN-palvelimen vahvistettua käyttäjäoikeudet. Kaikki tieto käyttäjän ja VPN-palvelimen välillä kulkee salattuina paketteina. Jatkuva suojattu yhteys mahdollistaa huipputurvallisuutta vaativien sovellusten kuten verkkopankin käytön mobiiliympäristössä.
+
+\section{Käyttäjän todennus}
+
+Viestien todennusten lisäksi on tärkeää varmistaa oikean käyttäjän käyttävän laitetta. Luonnollisesti on keksittävä keino todentamiseen, jossa vain käyttäjä tietää salaisuuden päästäkseen hallitsemaan laitetta tai lähettääkseen viestin. Schlöglhoferin ja Sametingerin \cite{secure} artikkelissa mainitaan mahdollisiksi todennustavoiksi PIN-koodi, salasana ja kosketuksella tunnistaminen. Tietoturvauhaksi mainitaan laitteen kadottaminen ja päätyminen väärälle käyttäjälle. Tietämykseen perustuvat tunnistamiset ovat vain oikean käyttäjän tiedossa, mutta pätevää tunnistautumista tässä tapauksessa ei voida liittää oikeaan käyttäjään. Myös hyökkääjällä on mahdollisuus arvata pätevä salasana riippuen hyväksyttyjen yritysten määrästä. Todennukset voivat perustua muuhunkin kuin oikean vastauksen tietämykseen. Uusia menetelmiä ovat elektroniset NFC-tarrat ja kameralla otettava kuva. Androidille on tarjolla sovellus nimeltä SecureLock. Sillä voi valita erilaisia tapoja todentaa käyttäjä laitteelle. 
+
+\subsection{PIN-koodi ja salasanatodennus}
+
+PIN-koodi ja salasana ovat yleisesti käytettyjä tunnistautumismenetelmiä. SIM-kortille todennus tapahtuu PIN-koodilla, joka voi olla käyttäjän tai verkko-operaattorin määrittelemä. Salasanalla tunnistaudutaan osaltaan laitteelle. SecureLock-sovelluksessa kuitenkin salasana voi olla pituudeltaan rajoittamaton. Salasanassa voi olla isoja ja pieniä kirjaimia ja lisäksi sisältää erikoismerkkejä.   Lisäksi on olemassa PUK-koodi (Personal unblocking code), joka voidaan syöttää laitteeseen PIN-koodin tai muun todennustavan unohduttua.
+
+\subsection{Kosketustodennus}
+
+Kosketustodennukseen kuuluu graafisen salasanan syöttäminen. SecureLock tarjoaa kosketustunnistautumisen, jossa käyttäjä rajaa sormenliikkeellään tietyn alueen laitteen ruudulta. Tähän ruutuun täytyy lisäksi sisältyä tietty määrä symboleita, jotka voivat olla esimerkiksi hedelmiä. Alla olevassa kuvassa keltainen neliö on rajattu alue, jolta täytyy löytyä sateenvarjon, suklaamuffinssin ja mansikan kuvakkeet. Käyttäjä piirtää valitsemansa alueen kosketusnäytöllä. Alueen on oltava myös oikean kokoinen, jotta todennus hyväksytään. Tässä tunnistautumistavassa yhdistyvät käyttäjän tietämys oikean alueen koosta, sijainnista ja tarvittavista symboleista.
+
+\includegraphics[scale=0.5]{gesture}
+
+\subsection{Muita todennustapoja}
+
+NFC on uusi teknologia, joka tarjoaa elektronisten tarrojen avulla tunnistautumisen laitteelle. Laite lukee tarrasta koodin, joka mahdollistaa todennuksen. Tarroja voi olla useampi ja laitteen on teknisiltä ominaisuuksiltaan tuettava NFC-todennusta. Laitteen kameralla on lisäksi mahdollisuus tunnistautua. Kuvan voi ottaa ilman tunnistautumista, mutta aikaisempia otettuja kuvia ei pysty tarkastelemaan laitteella. Kuvan kohteena voisivat toimia omat kasvot tai henkilökortti. Näin ollen käyttäjän tarvitse muistaa vain kohde, jota tarvitaan todennukseen.
 
 \section{Vertailu}
 
