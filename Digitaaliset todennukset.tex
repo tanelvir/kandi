@@ -73,9 +73,9 @@
 \author{Taneli Virkkala}
 \date{\today}
 \level{Kandidaatin tutkielma}
-\abstract{Mobiililaitteiden teknologinen kehitys on mahdollistanut monien viestien vaihtoon soveltuvien protokollien käytön nykypäivänä. Näihin protokolliin kuuluu laitteen käyttäjän todennus, viestin lähettäjän todennus, viestin datan eheys ja saapuminen oikealle vastaanottajalle. Digitaalinen allekirjoitus, MAC-funktio sekä Diffien ja Hellmanin menetelmä mahdollistavat turvallisen viestien vaihton kahden osapuolen välillä.
+\abstract{Mobiililaitteiden teknologinen kehitys on mahdollistanut monien viestien vaihtoon soveltuvien protokollien käytön nykypäivänä. Näihin protokolliin kuuluvat laitteen käyttäjän todennus, lähettäjän todennus, datan eheys ja viestin saapuminen oikealle vastaanottajalle. Digitaalinen allekirjoitus, MAC-funktio sekä Diffien ja Hellmanin menetelmä mahdollistavat turvallisen viestien vaihton kahden osapuolen välillä.
 
-Mobiililaite koostuu SIM-kortista ja prosessorista. Digitaaliseen allekirjoitukseen tarvittavaa avainta voidaan säilyttää laitteen muistissa tai SIM-kortilla. Digitaalisen allekirjoituksen voi tehdä kokonaan laitteen avulla tai delegoida operaation palvelimelle. Palvelimelle on hyvä luoda turvattu VPN-yhteys, jossa kaikki tieto voi kulkea salattuna.
+Mobiililaite koostuu SIM-kortista ja prosessorista. Digitaaliseen allekirjoitukseen tarvittavaa salaista avainta voidaan säilyttää laitteen muistissa tai SIM-kortilla. Digitaalisen allekirjoituksen voi tehdä kokonaan laitteen avulla tai delegoida operaation palvelimelle. Palvelimelle on hyvä luoda turvattu VPN-yhteys, jossa kaikki tieto voi kulkea salattuna.
 
 Luotettavaan tietoturvaan kuuluu lisäksi käyttäjän todentaminen mobiililaitteelle. Koska todentamisen tulee olla nopeaa, tehokkuus on otettava huomioon protokollien käytössä.}
 
@@ -163,15 +163,15 @@ Viestin varmenteessa on mukana lähettäjän liittämä julkinen avain, jollei s
 
 \subsection{Matemaattisia selityksiä}
 
-Algoritmien tulkinta vaatii pohjaksi tietämystä matemaattisista funktioista. Kongruenssirelaatiota käytetään monissa kaavoissa, joissa käytetään modulaarista aritmetiikkaa. Kongruenssirelaatio eli merkki $\equiv$ tarkoittaa kahden luvun $b$ ja $c$ erotuksen jaollisuutta luvulla $m$. Laskusta $(b - c)/m$ täytyy tulla lopputulokseksi kokonaisluku. Voidaan siis merkitä $b \equiv c \pmod{m}$, josta saadaan tulokseksi aina 0. Todetaan siis luvun $b$ olevan kongruentti $c$:n kanssa $\pmod{m}$. Esimerkiksi luku 6 on kongruentti 9 $\pmod{3}$. Merkitään 6 $\equiv $ 9$ \pmod{3}$, koska 6 - 9 $\pmod{3}$ = -3 $\pmod{3}$ eli 0. \cite{cong}
+Algoritmien tulkinta vaatii pohjaksi tietämystä matemaattisista funktioista. Kongruenssirelaatiota käytetään monissa kaavoissa, joihin sisältyy modulaarista aritmetiikkaa. Kongruenssirelaatio eli merkki $\equiv$ tarkoittaa kahden luvun $b$ ja $c$ erotuksen jaollisuutta luvulla $m$. Laskusta $(b - c)/m$ täytyy tulla lopputulokseksi kokonaisluku. Voidaan siis merkitä $b \equiv c \pmod{m}$, josta saadaan tulokseksi aina 0. Todetaan siis luvun $b$ olevan kongruentti $c$:n kanssa $\pmod{m}$. Esimerkiksi luku 6 on kongruentti 9 $\pmod{3}$. Merkitään 6 $\equiv $ 9$ \pmod{3}$, koska 6 - 9 $\pmod{3}$ = -3 $\pmod{3}$ eli 0. \cite{cong}
 
 Keskenään jaottomien lukujen (suhteellinen alkuluku) idea perustuu siihen, että toista lukua ei voi päätellä toisesta jakojäännösten perusteella. Tämä sama sääntö pätee myös potenssiin korotuksissa. Oletetaan lukujen $p$ ja $q$ olevan alkulukuja. Niiden suurin yhteinen tekijä (syt) on siten 1. Koska syt$(p, q)$ = 1, niin positiivisilla eksponenteilla $m$ ja $n$ tämä sääntö ei muutu. Voidaan todeta siis aina alkuluvulla itsellään kertomisen säilyttävän suurinpana yhteisenä tekijänä luvun 1 eli syt$(p^m, q^n)$ = 1. \cite{rel}  
 
-RSA:ssa käytettävä Eulerin funktio eli $\phi(n)$ kertoo niiden positiivisten kokonaislukujen $k$ lukumäärän ehdolla $1 \leq k \leq n$, joiden suurin yhteinen tekijä $n$:nän kanssa on 1. Eli luku $k$ ja luku $n$ ovat tällöin suhteellisia alkulukuja keskenään. Esimerkiksi $\phi(12) = 4$ sillä lukujen 1,5,7 ja 11 ainoa yhteinen tekijä luvun 12 kanssa on 1. Jos kyseessä on alkuluku $p$, sille on olemassa aina  keskenään jaottomia lukuja $p - 1$ verran. Voidaan todeta $\phi(p) = p -1$. Eulerin funktiolla saadaan tulokseksi lukujoukko, josta saadaan tarvittavat tekijät avainpareihin RSA:ssa. \cite{tot}
+RSA:ssa käytettävä Eulerin funktio eli $\phi(n)$ kertoo ehdolla $1 \leq k \leq n$ niiden positiivisten kokonaislukujen $k$ lukumäärän, joiden suurin yhteinen tekijä $n$:nän kanssa on 1. Eli luku $k$ ja luku $n$ ovat tällöin suhteellisia alkulukuja keskenään. Esimerkiksi $\phi(12) = 4$, sillä lukujen 1,5,7 ja 11 ainoa yhteinen tekijä luvun 12 kanssa on 1. Jos kyseessä on alkuluku $p$, sille on olemassa aina  keskenään jaottomia lukuja $p - 1$ verran. Voidaan todeta $\phi(p) = p -1$. Eulerin funktiolla saadaan tulokseksi lukujoukko, josta saadaan tarvittavat tekijät avainpareihin RSA:ssa. \cite{tot}
 	
-Primitiivijuuri tarkoittaa, että kokonaisluku $g$ potenssiin $n$ ja jakojäännös alkuluvusta $p$ ehdoilla $1 \leq n \leq p$ tuottaa kaikki kokonaisluvut väliltä 1 ja $p-1$. Kyseessä on $\phi(p) = p - 1$ määrän verran lukuja. Eli $g^n \pmod{p} \neq g^{n+1} \pmod{p}$, jossa $g, p, n \in \mathbb{Z}$. Esimerkiksi luvun 2 primitiivijuuri on mod 3, koska $2^1 \pmod{3} = 2$ ja $2^2 \pmod{3} = 1$. Luvut 1 ja 2 ovat pienempiä kuin 3 ja keskenään erisuuria, joten kaikki jakojäännökset väliltä 1 ja 2 (eli 3-1) on käyty. \cite{prim}
+Primitiivijuuri tarkoittaa, että kokonaisluku $g$ potenssiin $n$ ja jakojäännös alkuluvusta $p$ ehdoilla $1 \leq n \leq p$ tuottaa kaikki kokonaisluvut väliltä 1 ja $p-1$. Kyseessä on $\phi(p) = p - 1$ määrän verran lukuja. Eli $g^n \pmod{p} \neq g^{n+1} \pmod{p}$, jossa $g, p, n \in \mathbb{Z}$. Esimerkiksi luvun 2 primitiivijuuri on $\pmod{3}$, koska $2^1 \pmod{3} = 2$ ja $2^2 \pmod{3} = 1$. Luvut 1 ja 2 ovat pienempiä kuin 3 ja keskenään erisuuria, joten kaikki jakojäännökset väliltä 1 ja 2 (eli 3-1) on käyty. \cite{prim}
 
-Diskreettiä logaritmia pidetään tällä hetkellä ratkeamattomana alle eksponentiaalisessa ajassa. Kuvitellaan kokonaisluku $a$, joka on suhteellinen alkuluku luvulle $n$. Lisäksi $g$ on primitiivijuuri luvulle $n$. Eulerin funktiolla $\phi(n)$ saadaan etsittyä joukko lukuja, joista yksi luku $\mu$ ratkaisee kaavan  $a \equiv g^{\mu} \pmod{n}$. Näin ollen $\mu$ on luvun $a$ $g$-kantainen diskreetti logaritmi $\pmod{n}$, joten voidaan todeta $\mu = $ ind$_g$ $a\pmod{n}$. Indeksiä kuvaava ind tarkoittaa diskreettiä logaritmia. Lukua $a$ ei voida saada selville ilman $\mu$, vaikka $g$ ja $n$ olisikin tiedossa. On siis helppo laskea $a$ mikäli $\mu, $ tunnetaan, mutta lähes mahdoton laskea $\mu$ vaikka $a$ olisikin selvillä. \cite{disc}
+Diskreettiä logaritmia pidetään tällä hetkellä ratkeamattomana alle eksponentiaalisessa ajassa. Kuvitellaan kokonaisluku $a$, joka on suhteellinen alkuluku luvulle $n$. Lisäksi $g$ on primitiivijuuri luvulle $\pmod{n}$. Eulerin funktiolla $\phi(n)$ saadaan etsittyä joukko lukuja, joista yksi luku $\mu$ ratkaisee kaavan  $a \equiv g^{\mu} \pmod{n}$. Näin ollen $\mu$ on luvun $a$ $g$-kantainen diskreetti logaritmi $\pmod{n}$, joten voidaan todeta $\mu = $ ind$_g$ $a\pmod{n}$. Indeksiä kuvaava ind tarkoittaa diskreettiä logaritmia. Lukua $a$ ei voida saada selville ilman $\mu$, vaikka $g$ ja $n$ olisikin tiedossa. On siis helppo laskea $a$ mikäli $\mu, $ tunnetaan, mutta lähes mahdoton laskea $\mu$ vaikka $a$ olisikin selvillä. \cite{disc}
 
 \subsection{Salaus} 
 
@@ -195,7 +195,7 @@ Viesti $M$ salataan $E$:ksi seuraavalla kaavalla julkisella avaimella: $$E = M^e
 Vastaanottajalla on salainen avain $d$. Purkaminen tapahtuu kaavalla: 
 $$ M = E^d \pmod{n} $$
 
-Luvut $n, e$ ja $d$ eivät saa olla pääteltävissä toisistaan. $E$:stä ja $e$:stä ei voi päätellä viestiä M. Yleisesti tunnetusta $n$:stä ei voi päätellä $p$:tä tai $q$:ta. Jos $p$ tai $q$ olisi tiedossa, $\phi(n)$ ja avainparit voitaisiin saada selville. Tekijöihin jako on yhtä vaikea ongelma kuin diskreetti logaritmi. \cite{math1}
+Luvut $n, e$ ja $d$ eivät saa olla pääteltävissä toisistaan. $E$:stä ja $e$:stä ei voi päätellä viestiä $M$. Yleisesti tunnetusta $n$:stä ei voi päätellä $p$:tä tai $q$:ta. Jos $p$ tai $q$ olisi tiedossa, $\phi(n)$ ja avainparit voitaisiin saada selville. Tekijöihin jako on yhtä vaikea ongelma kuin diskreetti logaritmi. \cite{math1}
 
 
 \subsection{Diffien ja Hellmanin menetelmä}
@@ -204,7 +204,7 @@ Aivan RSA:n tavoin Diffien ja Hellmanin menetelmä (DH) käyttää modulaariarit
 
 Aloittaja A ja vastaaja V sopivat etukäteen luvuista $p$ ja $g$. Alkuluku  $p$ ja sen primitiivijuuren $g$ tulee olla molempien osapuolten tiedossa. Näiden lisäksi viestinvaihdon aloittavan osapuolen A on valittava salainen kokonaisluku $a$. Aloittaja lähettää vastaanottajalle V viestin $A = g^a \pmod{p}$. Tämän jälkeen V valitsee kokonaisluvun $b$, joka myös säilyy salaisena. V lähettää A:lle viestissä luvun $B = g^b \pmod{p}$. A laskee luvun $(g^b \pmod{p})^a \pmod{p}$. V laskee luvun $(g^a \pmod{p})^b \pmod{p}$.
 
-Diffien ja Hellmanin menetelmää voidaan käyttää istuntoavaimen luomiseen yhteyden muodostamiseksi. Lisäksi DH:lla pystytään luomaan AES-istuntoavain, jolla voidaan salata viestejä tai laskea tiivisteitä. Toista osapuolta ei välttämättä tarvitse kokoajan tunnistaa digitaalisilla allekirjoituksilla, sillä yhteistä istuntoavainta voidaan käyttää myöhemmin tunnistamisessa. Tämä menetelmä säästää laskentatehoa, koska digitaaliset allekirjoitukset ovat raskaita luoda. Asiakas/käyttäjä voi olla palveluntarjoajan tiedossa jonkin aikaa, mutta pidemmän ajan kuluessa avain tulisi vaihtaa tai vastaavasti istunto sulkea. Satunnaislukujen käyttö avaimen luonnissa tekee tietoturvasta paremman. Luonnollisesti avaimen pituuden sekä alkioiden tulee olla suuria, jotta niiden arvaaminen on ulkopuoliselle tunkeutujalle vaikeampaa. \cite{enti}
+Diffien ja Hellmanin menetelmää voidaan käyttää istuntoavaimen luomiseen luotettavan yhteyden muodostamiseksi. Lisäksi DH:lla pystytään luomaan AES-istuntoavain, jolla voidaan salata viestejä tai laskea tiivisteitä. Toista osapuolta ei välttämättä tarvitse kokoajan tunnistaa digitaalisilla allekirjoituksilla, sillä yhteistä istuntoavainta voidaan käyttää myöhemmin tunnistamisessa. Tämä menetelmä säästää laskentatehoa, koska digitaaliset allekirjoitukset ovat raskaita luoda. Asiakas/käyttäjä voi olla palveluntarjoajan tiedossa jonkin aikaa, mutta pidemmän ajan kuluessa avain tulisi vaihtaa tai vastaavasti istunto sulkea. Satunnaislukujen käyttö avaimen luonnissa tekee tietoturvasta paremman. Luonnollisesti avaimen pituuden sekä tarvittavien alkioiden tulee olla suuria, jotta alkioiden arvaaminen on ulkopuoliselle tunkeutujalle vaikeampaa. \cite{enti}
 
 \subsection{MAC-funktio}
 
@@ -310,7 +310,7 @@ PIN-koodi ja salasana ovat yleisesti käytettyjä tunnistautumismenetelmiä. SIM
 
 \subsection{Kosketustodennus}
 
-Kosketustodennukseen kuuluu graafisen salasanan syöttäminen. SecureLock tarjoaa kosketustunnistautumisen, jossa käyttäjä rajaa sormenliikkeellään tietyn alueen laitteen ruudulta. Tähän ruutuun täytyy lisäksi sisältyä tietty määrä symboleita, jotka voivat olla esimerkiksi hedelmiä. Alla olevassa kuvassa keltainen neliö on rajattu alue, jolta täytyy löytyä sateenvarjon, suklaamuffinssin ja mansikan kuvakkeet. Käyttäjä piirtää valitsemansa alueen kosketusnäytöllä. Alueen on oltava myös oikean kokoinen, jotta todennus hyväksytään. Tässä tunnistautumistavassa yhdistyvät käyttäjän tietämys oikean alueen koosta, sijainnista ja tarvittavista symboleista.
+Kosketustodennukseen kuuluu graafisen salasanan syöttäminen. SecureLock tarjoaa kosketustunnistautumisen, jossa käyttäjä rajaa sormenliikkeellään tietyn alueen laitteen ruudulta. Tähän ruutuun täytyy lisäksi sisältyä tietty määrä symboleita, jotka voivat olla esimerkiksi hedelmiä. Alla olevassa kuvassa keltainen neliö on rajattu alue, jolta täytyy löytyä sateenvarjon, suklaamuffinssin ja mansikan kuvakkeet.
 
 
 \begin{figure}[h!]
@@ -318,6 +318,8 @@ Kosketustodennukseen kuuluu graafisen salasanan syöttäminen. SecureLock tarjoa
 	\includegraphics[scale=0.5]{gesture}
 \caption{Käyttäjän todentaminen SecureLockilla \cite{secure}}
 \end{figure}
+
+Käyttäjä piirtää valitsemansa alueen kosketusnäytöllä. Alueen on oltava myös oikean kokoinen, jotta todennus hyväksytään. Tässä tunnistautumistavassa yhdistyvät käyttäjän tietämys oikean alueen koosta, sijainnista ja tarvittavista symboleista.
 
 \subsection{Muita todennustapoja}
 
